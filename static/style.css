@@ -70,13 +70,21 @@ nav ul li a:hover {
   
   
 .hero {
-    background: linear-gradient(to right, #00695c, #26a69a), url('/static/img/hero-bg.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 6em 1em;
-    text-align: center;
-    position: relative;
-  }
+  background: 
+    linear-gradient(to right, rgba(0, 105, 92, 0.7), rgba(38, 166, 154, 0.7)),
+    url('/static/img/contoh-banner1.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 100vh; /* 100% tinggi layar */
+  width: 100%; /* 100% lebar */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding: 6em 1em;
+}
   
   .hero::after {
     content: "";
@@ -117,6 +125,59 @@ nav ul li a:hover {
     line-height: 1.8em;
     color: #555;
   }
+
+  .layanan-sekolah {
+    padding: 4em 1em;
+    background: #fff;
+    text-align: center;
+    border-radius: 1.5em;
+    box-shadow: 0 0 30px rgba(0,0,0,0.05);
+    margin: 2em;
+  }
+  
+  .judul-layanan {
+    font-size: 1.8em;
+    color: white;
+    background-color: #157347;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 0.7em;
+    margin-bottom: 2em;
+  }
+  
+  .layanan-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+  
+  .layanan-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 130px;
+    padding: 1em;
+    transition: transform 0.3s ease;
+  }
+  
+  .layanan-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.8em;
+  }
+  
+  .layanan-item p {
+    font-weight: 600;
+    color: #444;
+    font-size: 0.95em;
+  }
+  
+  .layanan-item:hover {
+    transform: scale(1.05);
+  }  
+
 
   .visi-misi {
     display: flex;
