@@ -1,0 +1,252 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f5fdfb;
+    color: #333;
+  }
+  
+/* Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #157347;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container Flex */
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;  /* Menyusun logo dan navigasi sejajar secara vertikal */
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #157347;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: flex-end;  /* Menempatkan menu di sebelah kanan */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #157347;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #eaf7ef;
+    color: #000;
+}
+  
+  
+.hero {
+    background: linear-gradient(to right, #00695c, #26a69a), url('/static/img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 6em 1em;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .hero h1 {
+    position: relative;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .hero p {
+    position: relative;
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .tentang {
+    background-color: #ffffff;
+    padding: 3em 2em;
+    text-align: center;
+  }
+  
+  .tentang h2 {
+    font-size: 2em;
+    color: #157347;
+    margin-bottom: 1em;
+  }
+  
+  .tentang p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    color: #555;
+  }
+
+  .visi-misi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    background-color: #f1fdfb;
+    padding: 3em 2em;
+    text-align: center;
+  }
+  
+  .visi-misi .box {
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-left: 5px solid #20c997;
+    padding: 2em;
+    flex: 1;
+    min-width: 280px;
+    border-radius: 8px;
+  }
+  
+  .visi-misi h3 {
+    color: #157347;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+  
+  .visi-misi ul {
+    list-style: none;
+    padding: 0;
+    color: #444;
+  }
+  
+  .visi-misi ul li::before {
+    content: "✓";
+    color: #20c997;
+    margin-right: 8px;
+  }
+
+  .berita {
+    background-color: #fff;
+    padding: 3em 2em;
+    text-align: center;
+  }
+  
+  .berita h2 {
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    color: #157347;
+  }
+  
+  .berita-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2em;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .card h4 {
+    font-size: 1.2em;
+    color: #157347;
+    margin: 1em 1em 0.5em;
+  }
+  
+  .card p {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0 1em 1em;
+  }
+
+  
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004d4d;
+    color: white;
+  }  
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #157347;
+  }
+  
+  /* RESPONSIVE STYLE */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      width: 100%;
+    }
+  
+    nav.active {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    nav ul li {
+      border-top: 1px solid #ccc;
+    }
+  
+    nav ul li a {
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+    }
+  }  
