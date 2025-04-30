@@ -1,0 +1,133 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f5fdfb;
+    color: #333;
+  }
+  
+/* Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #157347;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container Flex */
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;  /* Menyusun logo dan navigasi sejajar secara vertikal */
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #157347;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: flex-end;  /* Menempatkan menu di sebelah kanan */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #157347;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #eaf7ef;
+    color: #000;
+}
+
+.btn-daftar {
+  background-color: #198754; /* Bootstrap-like green */
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-daftar:hover {
+  background-color: #157347;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004d4d;
+    color: white;
+  }  
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #157347;
+  }
+  
+  /* RESPONSIVE STYLE */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      width: 100%;
+    }
+  
+    nav.active {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    nav ul li {
+      border-top: 1px solid #ccc;
+    }
+  
+    nav ul li a {
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+    }
+  }  

@@ -40,6 +40,14 @@ header .container {
     height: 50px;
 }
 
+
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  color: rgb(5, 98, 83);
+}
+
 /* Navigasi */
 nav {
     display: flex;
@@ -67,15 +75,31 @@ nav ul li a:hover {
     background-color: #eaf7ef;
     color: #000;
 }
+
+.btn-daftar {
+  background-color: #198754; /* Bootstrap-like green */
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-daftar:hover {
+  background-color: #157347;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
   
   
 .hero {
   background: 
-    linear-gradient(to right, rgba(0, 105, 92, 0.7), rgba(38, 166, 154, 0.7)),
-    url('/static/img/contoh-banner1.jpg') no-repeat center center;
+    url('/static/img/banne-hero.jpg');
   background-size: cover;
   color: white;
-  height: 100vh; /* 100% tinggi layar */
+  height: 40vh; /* 100% tinggi layar */
   width: 100%; /* 100% lebar */
   display: flex;
   flex-direction: column;
@@ -90,7 +114,7 @@ nav ul li a:hover {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay */
   }
   
   .hero h1 {
@@ -125,6 +149,18 @@ nav ul li a:hover {
     line-height: 1.8em;
     color: #555;
   }
+
+  .foto-sambutan {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 10%;
+    border-radius: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
 
   .layanan-sekolah {
     padding: 4em 1em;
@@ -249,8 +285,8 @@ nav ul li a:hover {
   
   .card img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
+    height: 200px;
+    object-fit: initial;
   }
   
   .card h4 {
@@ -265,6 +301,83 @@ nav ul li a:hover {
     margin: 0 1em 1em;
   }
 
+
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .berita-grid.marquee {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* Penting agar bisa bergerak panjang */
+    animation: marquee 40s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }  
+  
+
+  .contact-section {
+    background-color: #2bab31; /* Hijau tua */
+    color: white;
+    padding: 30px 20px;
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .left-contact, .right-contact {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  
+  .left-contact h3,
+  .right-contact h3 {
+    margin-bottom: 10px;
+  }
+  
+  .right-contact a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .right-contact a i {
+    margin-right: 5px;
+  }
+  
+  
+  .right-contact a:hover {
+    text-decoration: underline;
+  }
   
   
   footer {
@@ -273,13 +386,6 @@ nav ul li a:hover {
     background-color: #004d4d;
     color: white;
   }  
-
-  .menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: #157347;
-  }
   
   /* RESPONSIVE STYLE */
   @media (max-width: 768px) {

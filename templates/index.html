@@ -6,6 +6,7 @@
   <title>Sekolah Islam Modern</title>
   <link rel="stylesheet" href="/static/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -14,27 +15,27 @@
         <img src="/static/img/Logo_MDT-removebg-preview.png" alt="Logo MDT Nurul Inayah" style="height: 60px;">
         <span>MDT Nurul Inayah</span>
       </div> 
-      
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+  
+       <!-- Hamburger icon -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav>
       <ul>
         <li><a href="index.html">Beranda</a></li>
         <li><a href="profil.html">Profil</a></li>
-        <li><a href="akademik.html">Akademik</a></li>
+        <li><a href="program.html">Program</a></li>
         <li><a href="berita.html">Berita</a></li>
         <li><a href="galeri.html">Galeri</a></li>
-        <li><a href="ppdb.html">PPDB</a></li>
+        <li><a href="daftar.html" class="btn-daftar">Daftar</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Selamat Datang di Sekolah MDT Nurul Inayah</h1>
-    <p>Menumbuhkan generasi Qur'ani, berprestasi, dan berakhlak mulia</p>
   </section>
 
   <section class="tentang">
-    <h2>Sambutan</h2>
+    <h2>Sambutan Kepala Sekolah</h2>
+    <img src="/static/img/kepala_madrasah.png" alt="Foto Kepala Sekolah" class="foto-sambutan">
     <p>Assalamu'alaikum warahmatullahi wabarakatuh. Kami menyambut Anda di website resmi Sekolah Islam Modern. Dengan pendidikan berbasis Islam dan kurikulum nasional, kami siap mencetak generasi berilmu dan bertakwa.</p>
   </section>
 
@@ -42,24 +43,20 @@
     <h2 class="judul-layanan">Layanan Sekolah</h2>
     <div class="layanan-container">
       <div class="layanan-item">
-        <img src="/static/img/logo-layanan2.png" alt="Pendidikan Tahfidz">
-        <p>Pendidikan Tahfidz</p>
+        <img src="/static/img/logo-layanan2.png" alt="Doa Harian">
+        <p>Doa Sehari - Hari (Harian)</p>
       </div>
       <div class="layanan-item">
-        <img src="/static/img/logo-layanan1.png" alt="Kelas Unggulan">
-        <p>Kelas Unggulan</p>
+        <img src="/static/img/logo-layanan1.png" alt="Hafalan 30 Juz">
+        <p>Hafalan 30 Juz</p>
       </div>
       <div class="layanan-item">
-        <img src="/static/img/logo-layanan4.png" alt="Mahir Bahasa">
-        <p>Mahir Bahasa Arab</p>
+        <img src="/static/img/logo-layanan4.png" alt="Praktek Ibadah">
+        <p>Praktek Ibadah</p>
       </div>
       <div class="layanan-item">
-        <img src="/static/img/logo-layanan3.png" alt="Extrakurikuler">
-        <p>Extrakurikuler</p>
-      </div>
-      <div class="layanan-item">
-        <img src="/static/img/logo-layanan5.png" alt="Sport">
-        <p>Sport</p>
+        <img src="/static/img/logo-layanan6.png" alt="Baca Tulis Qur'an">
+        <p>Baca Tulis Qur'an</p>
       </div>
     </div>
   </section>
@@ -82,19 +79,76 @@
 
   <section class="berita">
     <h2>Berita & Kegiatan Terbaru</h2>
-    <div class="berita-grid">
-      <div class="card">
-        <img src="img/kegiatan1.jpg" alt="Kegiatan 1">
-        <h4>Pesantren Kilat Ramadhan</h4>
-        <p>Kegiatan pembinaan rohani selama bulan Ramadhan untuk siswa SD hingga SMA.</p>
-      </div>
-      <div class="card">
-        <img src="img/kegiatan2.jpg" alt="Kegiatan 2">
-        <h4>Lomba Cerdas Cermat Islami</h4>
-        <p>Prestasi luar biasa dari tim kami yang meraih juara 1 tingkat kota.</p>
+    <div class="marquee-container">
+      <div class="berita-grid marquee">
+        <!-- Konten Asli -->
+        <div class="card">
+          <img src="/static/img/pesantren-kilat.jpg" alt="Kegiatan 1">
+          <h4>Pesantren Kilat Ramadhan</h4>
+          <p>Kegiatan pembinaan rohani selama bulan Ramadhan untuk siswa SD hingga SMA.</p>
+        </div>
+        <div class="card">
+          <img src="/static/img/kegiatanmengajar.jpg" alt="Kegiatan 2">
+          <h4>Kegiatan Belajar Bahasa Arab</h4>
+          <p>Kegiatan sehari-hari yaitu belajar bahasa Arab dan mencoba untuk mengkomunikasikannya.</p>
+        </div>
+        <div class="card">
+          <img src="/static/img/lomba-olahraga.jpg" alt="Kegiatan 3">
+          <h4>Lomba Olahraga Antar Siswa</h4>
+          <p>Ajang kompetisi olahraga untuk mempererat persaudaraan antar siswa di semua jenjang.</p>
+        </div>
+        <div class="card">
+          <img src="/static/img/bazar-ramadhan.jpg" alt="Kegiatan 4">
+          <h4>Bazar Ramadhan</h4>
+          <p>Kegiatan bazar makanan dan kerajinan yang diselenggarakan selama bulan Ramadhan.</p>
+        </div>
+  
+        <!-- Duplikat Konten untuk efek infinite -->
+        <div class="card">
+          <img src="/static/img/pesantren-kilat.jpg" alt="Kegiatan 1">
+          <h4>Pesantren Kilat Ramadhan</h4>
+          <p>Kegiatan pembinaan rohani selama bulan Ramadhan untuk siswa SD hingga SMA.</p>
+        </div>
+        <div class="card">
+          <img src="/static/img/kegiatanmengajar.jpg" alt="Kegiatan 2">
+          <h4>Kegiatan Belajar Bahasa Arab</h4>
+          <p>Kegiatan sehari-hari yaitu belajar bahasa Arab dan mencoba untuk mengkomunikasikannya.</p>
+        </div>
+        <div class="card">
+          <img src="/static/img/lomba-olahraga.jpg" alt="Kegiatan 3">
+          <h4>Lomba Olahraga Antar Siswa</h4>
+          <p>Ajang kompetisi olahraga untuk mempererat persaudaraan antar siswa di semua jenjang.</p>
+        </div>
+        <div class="card">
+          <img src="/static/img/bazar-ramadhan.jpg" alt="Kegiatan 4">
+          <h4>Bazar Ramadhan</h4>
+          <p>Kegiatan bazar makanan dan kerajinan yang diselenggarakan selama bulan Ramadhan.</p>
+        </div>
       </div>
     </div>
-  </section>
+  </section>  
+
+  <div class="contact-section">
+    <div class="contact-content">
+      <div class="left-contact">
+        <h3>Hubungi Kami</h3>
+        <p>Sekolah MDT Nurul Inayah</p>
+        <p>Alamat: Jl. Pendidikan No.123, Kota Anda</p>
+        <p>Email: info@mdtnurulinayah.sch.id</p>
+      </div>
+      <div class="right-contact">
+        <h3>Ikuti Kami</h3>
+        <p>
+          <a href="https://facebook.com/mdtnurulinayah" target="_blank">
+            <i class="fab fa-facebook-f"></i> Facebook
+          </a>
+          <a href="https://instagram.com/mdtnurulinayah" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+          </a>
+        </p>
+      </div>      
+    </div>
+  </div>  
 
   <footer>
     <p>© 2025 MDT Nurul Inayah.</p>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar - Website Sekolah</title>
+  <link rel="stylesheet" href="/static/daftar.css">
+</head>
+<body>
+  <div class="container">
+    <form class="form-login" action="/database/cek_login.php" method="POST">
+    <div class="left-side">
+      <div class="logo">
+        <img src="/static/img/Logo_MDT-removebg-preview.png" alt="Logo Sekolah">
+      </div>
+      <h1>Masuk untuk melanjutkan pendaftaran</h1>
+      <p>Jika anda belum melakukan pengisian formulir pendaftaran, Anda bisa isi formulir pendaftaran <a href="/admin/formulir.html" class="link-daftar">disini</a></p>
+      <div class="illustration">
+        <!-- Gambar ilustrasi kecil, opsional -->
+      </div>
+    </div>
+
+    <div class="right-side">
+      <form class="form-login">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Masukkan username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password" required>
+
+        <div class="forgot-password">
+          <a href="#">Lupa password?</a>
+        </div>
+
+        <div class="keep-logged">
+          <input type="checkbox" id="tetap-masuk">
+          <label for="tetap-masuk">Tetap masuk</label>
+        </div>
+
+        <button type="submit" class="btn-masuk">Masuk</button>
+      </form>
+
+      <footer>
+        <p>©  2025. MDT Nurul Inayah.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

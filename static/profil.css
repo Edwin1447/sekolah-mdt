@@ -1,0 +1,225 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f5fdfb;
+    color: #333;
+  }
+  
+/* Header */
+header {
+    background-color: #ffffff;
+    border-bottom: 3px solid #157347;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container Flex */
+header .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;  /* Menyusun logo dan navigasi sejajar secara vertikal */
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #157347;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: flex-end;  /* Menempatkan menu di sebelah kanan */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #157347;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #eaf7ef;
+    color: #000;
+}
+
+.btn-daftar {
+  background-color: #198754; /* Bootstrap-like green */
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-daftar:hover {
+  background-color: #157347;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Hero Section */
+.hero-profil {
+    background: url('/static/img/banne-profil.jpg') center/cover no-repeat;
+    height: 25vh;
+    width: 100%;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-profil h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-profil p {
+    font-size: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+/* About Section */
+.about-section {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Visi Misi */
+.visi-misi {
+    background-color: #f0f8ff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.visi-misi h2 {
+    color: #006400;
+    margin-bottom: 40px;
+}
+
+.grid-visi-misi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.grid-visi-misi h3 {
+    color: #228B22;
+    margin-bottom: 10px;
+}
+
+.grid-visi-misi p,
+.grid-visi-misi ul {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.grid-visi-misi ul {
+    padding-left: 20px;
+}
+
+/* Struktur Organisasi */
+.struktur-organisasi {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.struktur-organisasi h2 {
+    color: #006400;
+    margin-bottom: 20px;
+}
+
+.struktur-organisasi p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #004d4d;
+    color: white;
+  }  
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #157347;
+  }
+  
+  /* RESPONSIVE STYLE */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      width: 100%;
+    }
+  
+    nav.active {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    nav ul li {
+      border-top: 1px solid #ccc;
+    }
+  
+    nav ul li a {
+      padding: 10px 20px;
+      display: block;
+      width: 100%;
+    }
+  }  
