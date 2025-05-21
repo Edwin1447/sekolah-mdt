@@ -1,49 +1,68 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daftar - Website Sekolah</title>
-  <link rel="stylesheet" href="/static/daftar.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Registration Form</title>
+  <link rel="stylesheet" href="/static/daftar.css" />
 </head>
 <body>
-  <div class="container">
-    <form class="form-login" action="/database/cek_login.php" method="POST">
-    <div class="left-side">
-      <div class="logo">
-        <img src="/static/img/Logo_MDT-removebg-preview.png" alt="Logo Sekolah">
-      </div>
-      <h1>Masuk untuk melanjutkan pendaftaran</h1>
-      <p>Jika anda belum melakukan pengisian formulir pendaftaran, Anda bisa isi formulir pendaftaran <a href="/admin/formulir.html" class="link-daftar">disini</a></p>
-      <div class="illustration">
-        <!-- Gambar ilustrasi kecil, opsional -->
-      </div>
+  <div class="container" id="container">
+    <!-- Registration Form -->
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Pendaftaran</h1>
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Daftar</button>
+      </form>
     </div>
 
-    <div class="right-side">
-      <form class="form-login">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Masukkan username" required>
-
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Masukkan password" required>
-
+    <!-- Login Form -->
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Masuk Portal</h1>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
         <div class="forgot-password">
-          <a href="#">Lupa password?</a>
-        </div>
-
-        <div class="keep-logged">
-          <input type="checkbox" id="tetap-masuk">
-          <label for="tetap-masuk">Tetap masuk</label>
-        </div>
-
-        <button type="submit" class="btn-masuk">Masuk</button>
+          <a href="#">Lupa Password?</a>
+        </div>        
+        <button>Masuk</button>
       </form>
+    </div>
 
-      <footer>
-        <p>©  2025. MDT Nurul Inayah.</p>
-      </footer>
+    <!-- Overlay Panel -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Selamat Datang!</h1>
+          <p>Sudah punya akun?</p>
+          <button class="ghost" id="signIn">Login</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Assalammualaikum Selamat Datang!</h1>
+          <p>tidak punya akun?</p>
+          <button class="ghost" id="signUp">Register</button>
+        </div>
+      </div>
     </div>
   </div>
+ 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById('container');
+      const signUpButton = document.getElementById('signUp');
+      const signInButton = document.getElementById('signIn');
+
+      signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+      });
+
+      signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+      });
+    });
+  </script>
 </body>
 </html>

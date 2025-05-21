@@ -1,135 +1,257 @@
-/* Reset default */
+/* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #dfe9f3, #eef2f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+              0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 850px;
+  max-width: 100%;
+  min-height: 500px;
+  display: flex;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Form Containers */
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 0 50px;
+}
+
+.form-container h1 {
+  color: #157347;
+  text-align: center;
+  font-family: 'Poppins' sans-serif;
+  font-size: 25px;
+}
+
+.forgot-password {
+  width: 100%;
+  text-align: right;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  font-size: 14px;
+  color: #157347;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #FFEA00;
+}
+
+.sign-in-container {
+  left: 0;
+  z-index: 2;
+}
+
+.sign-up-container {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+.container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Overlay */
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.overlay {
+  background: #157347;
+  color: white;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  display: flex;
+}
+
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  text-align: center;
+  width: 50%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+/* Buttons and Inputs */
+button {
+  border: none;
+  padding: 12px 45px;
+  margin-top: 10px;
+  background-color: #157347;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #FFEA00;
+}
+
+button.ghost {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Social Icons */
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* MOBILE RESPONSIVE - Transisi Tetap Aktif */
+@media (max-width: 768px) {
   body {
-    background-color: #e8f5e9;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 20px 10px;
   }
-  
+
   .container {
-    width: 90%;
-    max-width: 1200px;
-    height: 90vh;
-    display: flex;
-    box-shadow: 0 0 20px rgba(0, 128, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .left-side {
-    background-color: #20c997;
-    color: white;
-    flex: 1;
-    padding: 100px;
-    display: flex;
     flex-direction: column;
-    align-items: center; /* ini buat center horizontal */
-    justify-content: center; /* ini buat center vertical */
-    gap: 20px;
-    position: relative; /* tetap kasih ini kalau perlu */
+    width: 100%;
+    height: auto;
+    min-height: 600px;
   }
-  
-  /* Logo langsung ikut flow flexbox */
-  .logo {
-    background-color: white;
-    padding: 10px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+  .form-container {
+    position: absolute;
+    width: 100%;
+    padding: 30px 20px;
+    height: auto;
   }
-  
-  .left-side .logo img {
-    width: 80px;
+
+  .sign-in-container {
+    transform: translateY(0%);
+    opacity: 1;
+    z-index: 2;
   }
-  
-  
-  
-  .left-side h1 {
-    font-size: 32px;
-    font-weight: 700;
+
+  .sign-up-container {
+    transform: translateY(100%);
+    opacity: 0;
+    z-index: 1;
   }
-  
-  .left-side p {
-    font-size: 16px;
-    margin-top: 10px;
+
+  .container.right-panel-active .sign-in-container {
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: 1;
   }
-  
-  .left-side .link-daftar {
-    color: #ffeb3b;
-    font-weight: bold;
-    text-decoration: none;
+
+  .container.right-panel-active .sign-up-container {
+    transform: translateY(0%);
+    opacity: 1;
+    z-index: 2;
   }
-  
-  /* RIGHT SIDE */
-  .right-side {
-    background-color: #ffffff;
-    flex: 1;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  .overlay-container {
+    display: none;
   }
-  
-  .form-login {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form-login label {
-    font-weight: 600;
-  }
-  
-  .form-login input[type="text"],
-  .form-login input[type="password"] {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .forgot-password {
-    text-align: right;
-  }
-  
-  .forgot-password a {
-    color: #2e7d32;
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .keep-logged {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .btn-masuk {
-    background-color: #2e7d32;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-masuk:hover {
-    background-color: #1b5e20;
-  }
-  
-  footer {
-    margin-top: 30px;
-    text-align: center;
+}
+
+/* Ekstra Responsive */
+@media (max-width: 400px) {
+  button {
+    padding: 10px 25px;
     font-size: 12px;
-    color: #777;
-  }  
+  }
+
+  input {
+    padding: 10px 12px;
+  }
+
+  .form-container {
+    padding: 15px 20px;
+  }
+}
