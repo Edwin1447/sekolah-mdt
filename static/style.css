@@ -429,46 +429,6 @@ nav ul li a:hover {
     transform: scale(1.05);
   }  
   
-
-  .contact-section {
-    background-color: #2bab31; /* Hijau tua */
-    color: white;
-    padding: 30px 20px;
-  }
-  
-  .contact-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .left-contact, .right-contact {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-  }
-  
-  .left-contact h3,
-  .right-contact h3 {
-    margin-bottom: 10px;
-  }
-  
-  .right-contact a {
-    color: white;
-    text-decoration: none;
-    margin-right: 10px;
-  }
-
-  .right-contact a i {
-    margin-right: 5px;
-  }
-  
-  
-  .right-contact a:hover {
-    text-decoration: underline;
-  }
   
   
   footer {

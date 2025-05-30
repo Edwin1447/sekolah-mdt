@@ -1,243 +1,139 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berita - Sekolah Islam</title>
-    <link rel="stylesheet" href="/static/berita.css">
-    <link rel="stylesheet" href="berita.css">
-    <!-- Font Awesome untuk ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita - MDT Nurul Inayah</title>
+  <link rel="stylesheet" href="/static/berita.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header dan Navigasi - sesuaikan dengan template yang sudah ada -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="/static/img/Logo_MDT-removebg-preview.png" alt="Logo Sekolah Islam">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li><a href="profil.html">Profil</a></li>
-                    <li><a href="akademik.html">Akademik</a></li>
-                    <li><a href="berita.html" class="active">Berita</a></li>
-                    <li><a href="galeri.html">Galeri</a></li>
-                    <li><a href="daftar.html">Daftar</a></li>
-                </ul>
-            </nav>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="/static/img/Logo_MDT-removebg-preview.png" alt="Logo MDT Nurul Inayah" style="height: 60px;">
+        <span>MDT Nurul Inayah</span>
+      </div> 
+  
+      <!-- Hamburger icon -->
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="akademik.html">Akademik</a></li>
+          <li><a href="berita.html" class="active">Berita</a></li>
+          <li><a href="galeri.html">Galeri</a></li>
+          <li><a href="daftar.html" class="btn-daftar">Daftar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Halaman Header -->
+     <div class="page-header">
+      <h1>Berita & Informasi</h1>
+      <p>Ikuti Perkembangan terbaru seputar kegiatan dan prestasi MDT Nurul Inayah</p>
+     </div>
+
+     <!-- News -->
+   <!-- Featured News -->
+   <div class="featured-news">
+    <div class="featured-content">
+      <div class="featured-image">
+        <img src="/static/img/5.jpg" alt="berita-satu">
+      </div>
+      <div class="featured-text">
+        <span class="featured-badge">Berita Utama</span>
+        <h2 class="featured-title">Penerimaan Siswa Siswi Baru di MDT Nurul Inayah TA 2024/2025</h2>
+        <p class="featured-excerpt">
+          Pada Selasa, 7 Mei 2024, MDT Nurul Inayah resmi membuka kegiatan penerimaan siswa-siswi baru untuk tahun ajaran 2024/2025. Kegiatan ini berlangsung tertib dan lancar, diikuti oleh para calon peserta didik. Proses pendaftaran dilakukan langsung di sekolah dengan dibantu oleh para guru dan panitia. Pihak sekolah berharap melalui penerimaan ini, siswa-siswi baru dapat mulai belajar dan berkembang dalam lingkungan yang islami dan penuh semangat.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- News Grid -->
+  <div class="news-grid">
+    <article class="news-card">
+      <div class="news-image">
+        <img src="/static/img/2.jpg" alt="berita-dua">
+      </div>
+      <div class="news-content">
+        <div class="news-meta">
+          <span class="news-date">📅 6 Juli 2024</span>
+          <span class="news-category">Berita MDT Nurul Inayah</span>
         </div>
-    </header>
+        <h3 class="news-title">Tahun Baru Islam di MDT Nurul Inayah 1446H</h3>
+        <p class="news-excerpt">
+          MDT Nurul Inayah mengadakan kegiatan untuk memperingati Tahun Baru Islam 1 Muharram 1446 H pada Sabtu, 6 Juli 2024. Acara dimulai dengan pawai ta’aruf di sekitar lingkungan sekolah, diikuti oleh doa bersama, tausiah tentang makna hijrah, serta berbagai lomba Islami seperti adzan, hafalan surat pendek, dan mewarnai kaligrafi. Kegiatan ini bertujuan menanamkan nilai keislaman dan semangat hijrah kepada para siswa sejak dini.
+        </p>
+      </div>
+    </article>
 
-    <!-- Banner Halaman Berita -->
-    <section class="page-banner">
-        <div class="container">
-            <h1>Berita & Informasi</h1>
-            <p>Temukan berita terbaru dan informasi penting seputar kegiatan Sekolah Islam kami</p>
+    <article class="news-card">
+      <div class="news-image">
+        <img src="/static/img/4.jpg" alt="berita-tiga">
+      </div>
+      <div class="news-content">
+        <div class="news-meta">
+          <span class="news-date">📅 8 Februari 2024</span>
+          <span class="news-category">Galery</span>
         </div>
-    </section>
+        <h3 class="news-title">Memperingati Isra Miraj di MDT Nurul Inayah 1446H</h3>
+        <p class="news-excerpt">
+          MDT Nurul Inayah mengadakan kegiatan peringatan Isra Mi’raj Nabi Muhammad SAW 1446 H pada hari Sabtu, 3 Februari 2024. Acara diisi dengan pembacaan ayat suci Al-Qur’an, ceramah agama, dan penampilan dari siswa-siswi seperti sholawat dan puisi Islami. Tausiah disampaikan oleh ustadz setempat yang mengangkat tema pentingnya shalat dalam kehidupan sehari-hari. Kegiatan ini bertujuan untuk menambah wawasan keislaman serta menumbuhkan kecintaan siswa terhadap Nabi Muhammad SAW.
+        </p>
+      </div>
+    </article>
 
-    <!-- Kategori Berita -->
-    <section class="news-category">
-        <div class="container">
-            <div class="category-filter">
-                <button class="category-btn active" data-category="all">Semua</button>
-                <button class="category-btn" data-category="akademik">Akademik</button>
-                <button class="category-btn" data-category="keislaman">Keislaman</button>
-                <button class="category-btn" data-category="prestasi">Prestasi</button>
-                <button class="category-btn" data-category="kegiatan">Kegiatan</button>
-                <button class="category-btn" data-category="pengumuman">Pengumuman</button>
-            </div>
+    <article class="news-card">
+      <div class="news-image">
+        <img src="/static/img/1.jpg" alt="berita-dua">
+      </div>
+      <div class="news-content">
+        <div class="news-meta">
+          <span class="news-date">📅 20 Desember 2024</span>
+          <span class="news-category">Akademik</span>
         </div>
-    </section>
+        <h3 class="news-title">Pelaksanaan Ujian Akhir Semester Genap 2024/2025</h3>
+        <p class="news-excerpt">
+          Ujian Akhir Semester Ganjil akan dilaksanakan mulai tanggal 10 - Desember - 2024. Guru guru dari MDT Nurul Inayah sedang memepersiapkan untuk Ujian Akhir Semester Ganjil
+      </div>
+    </article>
 
-    <!-- Pencarian Berita -->
-    <section class="news-search">
-        <div class="container">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Cari berita...">
-                <button id="searchBtn"><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-    </section>
+      
+  </main>
 
-    <!-- Berita Utama -->
-    <section class="featured-news">
-        <div class="container">
-            <div class="featured-news-card">
-                <div class="featured-news-image">
-                    <img src="images/berita/featured.jpg" alt="Berita Utama">
-                </div>
-                <div class="featured-news-content">
-                    <span class="news-category-tag">Keislaman</span>
-                    <h2>Peringatan Maulid Nabi Muhammad SAW di Sekolah Kita</h2>
-                    <div class="news-meta">
-                        <span><i class="far fa-calendar-alt"></i> 12 Mei 2025</span>
-                        <span><i class="far fa-user"></i> Admin</span>
-                    </div>
-                    <p>Sekolah kita baru saja mengadakan peringatan Maulid Nabi Muhammad SAW dengan rangkaian kegiatan yang melibatkan seluruh siswa dan guru. Acara diisi dengan pembacaan Al-Quran, shalawat, dan ceramah tentang teladan Rasulullah SAW.</p>
-                    <a href="berita-detail.html?id=1" class="read-more">Baca Selengkapnya</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer>
+    <p>© 2025 MDT Nurul Inayah.</p>
+  </footer>
 
-    <!-- Daftar Berita -->
-    <section class="news-list">
-        <div class="container">
-            <div class="news-grid" id="newsContainer">
-                <!-- Berita akan ditampilkan di sini -->
-                <div class="news-item" data-category="akademik">
-                    <div class="news-image">
-                        <img src="images/berita/berita1.jpg" alt="Berita 1">
-                        <span class="news-category-tag">Akademik</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Hasil Ujian Semester Ganjil Tahun Ajaran 2024/2025</h3>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> 10 Mei 2025</span>
-                            <span><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p>Pengumuman hasil ujian semester ganjil telah dirilis. Para siswa dan orangtua dapat mengakses hasil melalui portal siswa atau menghubungi wali kelas masing-masing.</p>
-                        <a href="berita-detail.html?id=2" class="read-more">Baca Selengkapnya</a>
-                    </div>
-                </div>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    });
 
-                <div class="news-item" data-category="prestasi">
-                    <div class="news-image">
-                        <img src="images/berita/berita2.jpg" alt="Berita 2">
-                        <span class="news-category-tag">Prestasi</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Siswa Kita Raih Juara 1 Lomba Tahfidz Quran Tingkat Provinsi</h3>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> 5 Mei 2025</span>
-                            <span><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p>Alhamdulillah, siswa kita berhasil meraih juara 1 dalam Lomba Tahfidz Quran Tingkat Provinsi yang diselenggarakan pada akhir bulan lalu. Prestasi ini membanggakan sekolah kita.</p>
-                        <a href="berita-detail.html?id=3" class="read-more">Baca Selengkapnya</a>
-                    </div>
-                </div>
+    // Newsletter form
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      if (email) {
+        alert('Terima kasih! Anda telah berlangganan newsletter kami.');
+        this.querySelector('input[type="email"]').value = '';
+      }
+    });
 
-                <div class="news-item" data-category="kegiatan">
-                    <div class="news-image">
-                        <img src="images/berita/berita3.jpg" alt="Berita 3">
-                        <span class="news-category-tag">Kegiatan</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Studi Lapangan ke Museum Sejarah Islam</h3>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> 28 April 2025</span>
-                            <span><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p>Siswa kelas 5 dan 6 telah melaksanakan studi lapangan ke Museum Sejarah Islam sebagai bagian dari pembelajaran sejarah perkembangan Islam di Indonesia.</p>
-                        <a href="berita-detail.html?id=4" class="read-more">Baca Selengkapnya</a>
-                    </div>
-                </div>
-
-                <div class="news-item" data-category="pengumuman">
-                    <div class="news-image">
-                        <img src="images/berita/berita4.jpg" alt="Berita 4">
-                        <span class="news-category-tag">Pengumuman</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Jadwal Ujian Akhir Semester Genap Tahun Ajaran 2024/2025</h3>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> 25 April 2025</span>
-                            <span><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p>Jadwal ujian akhir semester genap telah dirilis. Para siswa diharapkan mulai mempersiapkan diri dengan belajar lebih giat dalam menghadapi ujian.</p>
-                        <a href="berita-detail.html?id=5" class="read-more">Baca Selengkapnya</a>
-                    </div>
-                </div>
-
-                <div class="news-item" data-category="keislaman">
-                    <div class="news-image">
-                        <img src="images/berita/berita5.jpg" alt="Berita 5">
-                        <span class="news-category-tag">Keislaman</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Program Ramadhan Kareem di Sekolah</h3>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> 20 April 2025</span>
-                            <span><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p>Sekolah kita telah menyiapkan program khusus selama bulan Ramadhan, termasuk kegiatan buka puasa bersama, tarawih, dan kajian Islam yang dapat diikuti oleh seluruh civitas sekolah.</p>
-                        <a href="berita-detail.html?id=6" class="read-more">Baca Selengkapnya</a>
-                    </div>
-                </div>
-
-                <div class="news-item" data-category="akademik">
-                    <div class="news-image">
-                        <img src="images/berita/berita6.jpg" alt="Berita 6">
-                        <span class="news-category-tag">Akademik</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>Workshop Pembelajaran Digital untuk Guru</h3>
-                        <div class="news-meta">
-                            <span><i class="far fa-calendar-alt"></i> 15 April 2025</span>
-                            <span><i class="far fa-user"></i> Admin</span>
-                        </div>
-                        <p>Para guru telah mengikuti workshop pembelajaran digital untuk meningkatkan kualitas pengajaran dengan memanfaatkan teknologi terkini yang sesuai dengan prinsip-prinsip Islam.</p>
-                        <a href="berita-detail.html?id=7" class="read-more">Baca Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button class="page-btn active">1</button>
-                <button class="page-btn">2</button>
-                <button class="page-btn">3</button>
-                <button class="page-btn next"><i class="fas fa-angle-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer - sesuaikan dengan template yang sudah ada -->
-    <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-column">
-                    <h3>Tentang Kami</h3>
-                    <p>Sekolah Islam kami berdedikasi untuk memberikan pendidikan berkualitas yang didasarkan pada nilai-nilai Islam dan akademik yang unggul.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Link Penting</h3>
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="profil.html">Profil</a></li>
-                        <li><a href="program.html">Program</a></li>
-                        <li><a href="berita.html">Berita</a></li>
-                        <li><a href="galeri.html">Galeri</a></li>
-                        <li><a href="daftar.html">Daftar</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Kontak Kami</h3>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Jl. Pendidikan No. 123, Kota</li>
-                        <li><i class="fas fa-phone"></i> (021) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@sekolahislam.ac.id</li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Ikuti Kami</h3>
-                    <div class="social-media">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sekolah Islam. Hak Cipta Dilindungi.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Script -->
-    <script src="berita.js"></script>
+    // Smooth scroll for read more links
+    document.querySelectorAll('.read-more').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Halaman detail berita akan segera tersedia.');
+      });
+    });
+  </script>
 </body>
 </html>

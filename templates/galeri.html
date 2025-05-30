@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sekolah Islam Modern</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/galeri.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -29,13 +30,271 @@
     </nav>
   </header>
 
+   <!-- Gallery Hero Section -->
+   <section class="gallery-hero">
+    <h1>Galeri Kegiatan</h1>
+    <p>Dokumentasi momen-momen berharga dalam perjalanan pendidikan Islam di MDT Nurul Inayah</p>
+  </section>
 
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="academic">Akademik</button>
+        <button class="filter-btn" data-filter="arts">Ekstrakurikuler</button>
+        <button class="filter-btn" data-filter="events">Acara Khusus</button>
+      </div>
+    </div>
 
-  
+    <!-- Gallery Grid -->
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Academic Items -->
+      <div class="gallery-item" data-category="academic">
+        <div class="gallery-date">15 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=400&h=250&fit=crop" alt="Pembelajaran Al-Quran">
+        <div class="gallery-info">
+          <div class="gallery-category">Akademik</div>
+          <h3 class="gallery-title">Pembelajaran Al-Quran Interaktif</h3>
+          <p class="gallery-description">Suasana pembelajaran Al-Quran dengan metode tahfidz yang menyenangkan dan efektif untuk siswa-siswi MDT Nurul Inayah.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="academic">
+        <div class="gallery-date">12 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop" alt="Kelas Sains">
+        <div class="gallery-info">
+          <div class="gallery-category">Akademik</div>
+          <h3 class="gallery-title">Praktikum Sains Terpadu</h3>
+          <p class="gallery-description">Siswa melakukan eksperimen sains dengan bimbingan guru untuk memahami konsep-konsep ilmiah secara mendalam.</p>
+        </div>
+      </div>
+
+      <!-- Religious Items -->
+      <div class="gallery-item" data-category="religious">
+        <div class="gallery-date">20 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=250&fit=crop" alt="Sholat Berjamaah">
+        <div class="gallery-info">
+          <div class="gallery-category">Keagamaan</div>
+          <h3 class="gallery-title">Sholat Berjamaah</h3>
+          <p class="gallery-description">Kegiatan sholat berjamaah yang dilaksanakan secara rutin untuk memperkuat ukhuwah dan ketaqwaan siswa.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="religious">
+        <div class="gallery-date">18 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=400&h=250&fit=crop" alt="Kajian Islam">
+        <div class="gallery-info">
+          <div class="gallery-category">Keagamaan</div>
+          <h3 class="gallery-title">Kajian Fiqih Remaja</h3>
+          <p class="gallery-description">Program kajian khusus untuk remaja tentang fiqih sehari-hari yang relevan dengan kehidupan modern.</p>
+        </div>
+      </div>
+
+      <!-- Sports Items -->
+      <div class="gallery-item" data-category="sports">
+        <div class="gallery-date">25 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=400&h=250&fit=crop" alt="Olahraga Futsal">
+        <div class="gallery-info">
+          <div class="gallery-category">Olahraga</div>
+          <h3 class="gallery-title">Turnamen Futsal Antar Kelas</h3>
+          <p class="gallery-description">Kompetisi futsal yang seru antar kelas untuk membangun sportivitas dan kerjasama tim.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="sports">
+        <div class="gallery-date">22 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=400&h=250&fit=crop" alt="Senam Pagi">
+        <div class="gallery-info">
+          <div class="gallery-category">Olahraga</div>
+          <h3 class="gallery-title">Senam Pagi Bersama</h3>
+          <p class="gallery-description">Kegiatan senam pagi rutin untuk menjaga kesehatan dan kebugaran seluruh warga sekolah.</p>
+        </div>
+      </div>
+
+      <!-- Arts Items -->
+      <div class="gallery-item" data-category="arts">
+        <div class="gallery-date">28 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=250&fit=crop" alt="Kaligrafi">
+        <div class="gallery-info">
+          <div class="gallery-category">Seni & Budaya</div>
+          <h3 class="gallery-title">Workshop Kaligrafi Arab</h3>
+          <p class="gallery-description">Pembelajaran seni kaligrafi Arab untuk mengembangkan kreativitas dan apresiasi terhadap keindahan huruf Arab.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="arts">
+        <div class="gallery-date">26 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop" alt="Hadroh">
+        <div class="gallery-info">
+          <div class="gallery-category">Seni & Budaya</div>
+          <h3 class="gallery-title">Latihan Hadroh</h3>
+          <p class="gallery-description">Kegiatan ekstrakurikuler hadroh untuk melestarikan seni musik Islami dan membangun karakter spiritual.</p>
+        </div>
+      </div>
+
+      <!-- Events Items -->
+      <div class="gallery-item" data-category="events">
+        <div class="gallery-date">30 Mar 2025</div>
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=250&fit=crop" alt="Milad Sekolah">
+        <div class="gallery-info">
+          <div class="gallery-category">Acara Khusus</div>
+          <h3 class="gallery-title">Perayaan Milad Sekolah</h3>
+          <p class="gallery-description">Perayaan ulang tahun sekolah dengan berbagai lomba dan pentas seni yang meriah.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="events">
+        <div class="gallery-date">05 Apr 2025</div>
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=250&fit=crop" alt="Wisuda">
+        <div class="gallery-info">
+          <div class="gallery-category">Acara Khusus</div>
+          <h3 class="gallery-title">Wisuda Tahfidz Al-Quran</h3>
+          <p class="gallery-description">Momen kebanggaan wisuda siswa-siswi yang telah berhasil menyelesaikan hafalan Al-Quran.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">250+</span>
+          <span class="stat-label">Foto Kegiatan</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Event Per Tahun</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Ekstrakurikuler</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Siswa Aktif</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Filter Gallery
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        button.classList.add('active');
+
+        const filterValue = button.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+            item.style.animation = 'fadeInUp 0.5s ease-out';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Modal functionality
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDescription = document.getElementById('modalDescription');
+    const closeModal = document.querySelector('.close');
+
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const title = item.querySelector('.gallery-title').textContent;
+        const description = item.querySelector('.gallery-description').textContent;
+
+        modalImage.src = img.src;
+        modalTitle.textContent = title;
+        modalDescription.textContent = description;
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Counter animation
+    function animateCounters() {
+      const counters = document.querySelectorAll('.stat-number');
+      const speed = 200;
+
+      counters.forEach(counter => {
+        const animate = () => {
+          const value = +counter.getAttribute('data-target') || +counter.innerText.replace(/\D/g, '');
+          const data = +counter.innerText.replace(/\D/g, '');
+          const time = value / speed;
+
+          if (data < value) {
+            counter.innerText = Math.ceil(data + time) + (counter.innerText.includes('+') ? '+' : '') + (counter.innerText.includes('%') ? '%' : '');
+            setTimeout(animate, 1);
+          } else {
+            counter.innerText = counter.innerText;
+          }
+        };
+        animate();
+      });
+    }
+
+    // Trigger counter animation when stats section is visible
+    const statsSection = document.querySelector('.stats-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    observer.observe(statsSection);
+  </script>
+
   <footer>
-    <p>© 2025 MDT Nurul Inayah.
+    <p>© 2025 MDT Nurul Inayah.</p>
   </footer>
 
-  <script src="/js/script.js"></script>
 </body>
 </html>

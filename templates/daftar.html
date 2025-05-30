@@ -10,13 +10,15 @@
   <div class="container" id="container">
     <!-- Registration Form -->
     <div class="form-container sign-up-container">
-      <form action="#">
+      <form id="registerForm" action="#">
         <h1>Pendaftaran</h1>
-        <input type="text" placeholder="Username" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button>Daftar</button>
-      </form>
+        <input type="text" placeholder="Username" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="password" id="confirmPassword" placeholder="Konfirmasi Password" required />
+        <p id="error-message" style="color: red; font-size: 14px;"></p>
+        <button type="submit">Daftar</button>
+      </form>      
     </div>
 
     <!-- Login Form -->
@@ -49,20 +51,37 @@
     </div>
   </div>
  
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const container = document.getElementById('container');
       const signUpButton = document.getElementById('signUp');
       const signInButton = document.getElementById('signIn');
-
+  
       signUpButton.addEventListener('click', () => {
         container.classList.add("right-panel-active");
       });
-
+  
       signInButton.addEventListener('click', () => {
         container.classList.remove("right-panel-active");
       });
+  
+      // Validasi Konfirmasi Password
+      const registerForm = document.getElementById('registerForm');
+      const password = document.getElementById('password');
+      const confirmPassword = document.getElementById('confirmPassword');
+      const errorMessage = document.getElementById('error-message');
+  
+      registerForm.addEventListener('submit', function (e) {
+        if (password.value !== confirmPassword.value) {
+          e.preventDefault();
+          errorMessage.textContent = "Password dan Konfirmasi Password tidak cocok!";
+        } else {
+          errorMessage.textContent = "";
+        }
+      });
     });
   </script>
+  
 </body>
 </html>
