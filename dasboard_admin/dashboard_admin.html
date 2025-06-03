@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - MDT Nurul Inayah</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dasboard_admin/dashboard_admin.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3>MDT Nurul Inayah</h3>
+            <div class="subtitle">Sistem Informasi Sekolah</div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/dasboard_admin/datasiswa.html" class="nav-link">
+                    <i class="fas fa-user-graduate"></i>
+                    Data Siswa
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="data-siswa-baru.html" class="nav-link">
+                    <i class="fas fa-user-plus"></i>
+                    Data Siswa Baru
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="data-guru.html" class="nav-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Data Guru
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="laporan.html" class="nav-link">
+                    <i class="fas fa-chart-bar"></i>
+                    Laporan
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="logout.html" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Dashboard Admin</h1>
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i> Beranda / Dashboard
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="islamic-pattern"></div>
+                <div class="stat-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-number" id="totalSiswa">0</div>
+                <div class="stat-label">Total Siswa</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="islamic-pattern"></div>
+                <div class="stat-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="stat-number" id="totalGuru">0</div>
+                <div class="stat-label">Total Guru</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="islamic-pattern"></div>
+                <div class="stat-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="stat-number" id="totalMapel">0</div>
+                <div class="stat-label">Mata Pelajaran</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="islamic-pattern"></div>
+                <div class="stat-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="stat-number" id="rataRataUmum">0</div>
+                <div class="stat-label">Rata-Rata Nilai</div>
+            </div>
+        </div>
+
+        <!-- Siswa Per Kelas -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <h3 class="chart-title">
+                    <i class="fas fa-users"></i> Data Siswa Per Kelas
+                </h3>
+            </div>
+            <div class="class-details" id="classDetails">
+                <div class="class-item">
+                    <div class="class-name">Kelas 1</div>
+                    <div class="class-count" id="kelas1">0</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">Kelas 2</div>
+                    <div class="class-count" id="kelas2">0</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">Kelas 3</div>
+                    <div class="class-count" id="kelas3">0</div>
+                </div>
+                <div class="class-item">
+                    <div class="class-name">Kelas 4</div>
+                    <div class="class-count" id="kelas4">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rata-Rata Nilai Per Kelas -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <h3 class="chart-title">
+                    <i class="fas fa-chart-line"></i> Rata-Rata Nilai Per Kelas
+                </h3>
+                <div class="class-buttons">
+                    <button class="class-btn active" onclick="showClassAverage(1)">Kelas 1</button>
+                    <button class="class-btn" onclick="showClassAverage(2)">Kelas 2</button>
+                    <button class="class-btn" onclick="showClassAverage(3)">Kelas 3</button>
+                    <button class="class-btn" onclick="showClassAverage(4)">Kelas 4</button>
+                </div>
+            </div>
+            <div class="average-display">
+                <div class="average-score" id="averageScore">85.5</div>
+                <div class="average-label" id="averageLabel">Rata-Rata Kelas 1</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Data dummy untuk simulasi
+        let schoolData = {
+            siswa: {
+                kelas1: 25,
+                kelas2: 30,
+                kelas3: 28,
+                kelas4: 32
+            },
+            guru: 15,
+            mataPelajaran: 12,
+            nilaiRataRata: {
+                kelas1: 85.5,
+                kelas2: 82.3,
+                kelas3: 87.1,
+                kelas4: 84.8
+            }
+        };
+
+        // Fungsi untuk update dashboard
+        function updateDashboard() {
+            // Update total siswa
+            const totalSiswa = schoolData.siswa.kelas1 + schoolData.siswa.kelas2 + 
+                              schoolData.siswa.kelas3 + schoolData.siswa.kelas4;
+            document.getElementById('totalSiswa').textContent = totalSiswa;
+
+            // Update total guru
+            document.getElementById('totalGuru').textContent = schoolData.guru;
+
+            // Update mata pelajaran
+            document.getElementById('totalMapel').textContent = schoolData.mataPelajaran;
+
+            // Update rata-rata umum
+            const rataRataUmum = (schoolData.nilaiRataRata.kelas1 + schoolData.nilaiRataRata.kelas2 + 
+                                 schoolData.nilaiRataRata.kelas3 + schoolData.nilaiRataRata.kelas4) / 4;
+            document.getElementById('rataRataUmum').textContent = rataRataUmum.toFixed(1);
+
+            // Update siswa per kelas
+            document.getElementById('kelas1').textContent = schoolData.siswa.kelas1;
+            document.getElementById('kelas2').textContent = schoolData.siswa.kelas2;
+            document.getElementById('kelas3').textContent = schoolData.siswa.kelas3;
+            document.getElementById('kelas4').textContent = schoolData.siswa.kelas4;
+        }
+
+        // Fungsi untuk menampilkan rata-rata per kelas
+        function showClassAverage(kelas) {
+            // Update active button
+            document.querySelectorAll('.class-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update display
+            const averageScore = schoolData.nilaiRataRata[`kelas${kelas}`];
+            document.getElementById('averageScore').textContent = averageScore;
+            document.getElementById('averageLabel').textContent = `Rata-Rata Kelas ${kelas}`;
+
+            // Animasi
+            const scoreElement = document.getElementById('averageScore');
+            scoreElement.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                scoreElement.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        // Animasi counter untuk angka
+        function animateCounter(id, target) {
+            const element = document.getElementById(id);
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 30);
+        }
+
+        // Inisialisasi dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDashboard();
+            
+            // Animasi loading untuk stats
+            setTimeout(() => {
+                const totalSiswa = schoolData.siswa.kelas1 + schoolData.siswa.kelas2 + 
+                                  schoolData.siswa.kelas3 + schoolData.siswa.kelas4;
+                animateCounter('totalSiswa', totalSiswa);
+                animateCounter('totalGuru', schoolData.guru);
+                animateCounter('totalMapel', schoolData.mataPelajaran);
+                
+                // Animate class counts
+                animateCounter('kelas1', schoolData.siswa.kelas1);
+                animateCounter('kelas2', schoolData.siswa.kelas2);
+                animateCounter('kelas3', schoolData.siswa.kelas3);
+                animateCounter('kelas4', schoolData.siswa.kelas4);
+            }, 500);
+        });
+
+        // Fungsi untuk menyimpan data (akan terhubung dengan menu lain)
+        function saveSchoolData(newData) {
+            schoolData = { ...schoolData, ...newData };
+            updateDashboard();
+        }
+
+        // Responsive sidebar toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
